@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 
-from app.utils import transform_image, get_prediction
+from utils import get_prediction, transform_image
 
 app = Flask(__name__)
 
