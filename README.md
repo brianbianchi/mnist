@@ -1,8 +1,10 @@
 ## mnist
 
+![Tests](https://github.com/brianbianchi/mnist/workflows/Tests/badge.svg)
+
 ```console
 $ python3 -m venv venv
 $ . venv/bin/activate 
-$ flask run
-$ python test/test.py
+$ (venv) flask run
+$ (venv) python -m unittest
 ```
