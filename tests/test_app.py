@@ -1,6 +1,6 @@
 import json
 import unittest
-from app import app
+from api.routes import app
 
 app.testing = True
 
