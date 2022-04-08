@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/brianbianchi/mnist/master/img/label.png" width="50%">
 </p>
 
---------------------------------------------------------------------
+---
 
 ![Tests](https://github.com/brianbianchi/mnist/workflows/Tests/badge.svg)
 
