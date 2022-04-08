@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/brianbianchi/mnist/master/mnist/label.png">
+  <img src="https://raw.githubusercontent.com/brianbianchi/mnist/master/img/label.png" width="50%">
 </p>
 
 --------------------------------------------------------------------
