@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, Response, request, jsonify
 
 from api.utils import get_prediction, transform_image
 
@@ -14,15 +14,15 @@ def predict():
     if request.method == 'POST':
         file = request.files.get('file')
         if file is None or file.filename == "":
-            return jsonify({'error': 'no file'})
+            return jsonify({'error': 'no file'}), 400
         if not allowed_file(file.filename):
-            return jsonify({'error': 'format not supported'})
+            return jsonify({'error': 'format not supported'}), 400
 
         try:
             img_bytes = file.read()
             tensor = transform_image(img_bytes)
             prediction = get_prediction(tensor)
             data = {'prediction': prediction.item(), 'class_name': str(prediction.item())}
-            return jsonify(data)
+            return jsonify(data), 200
         except:
-            return jsonify({'error': 'error during prediction'})
+            return jsonify({'error': 'error during prediction'}), 500
