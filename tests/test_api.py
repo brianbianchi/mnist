@@ -10,7 +10,6 @@ class MNISTPredictTests(unittest.TestCase):
         with app.test_client() as client:
             with open('img/three.png', 'rb') as image:
                 response = client.post('/predict', data={'file': image})
-                # print(json.loads(response))
                 prediction = json.loads(response.data)['prediction']
                 self.assertEqual(prediction, 3)
                 self.assertEqual(response.status_code, 200)
